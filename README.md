@@ -24,7 +24,7 @@ Ce script en Python permet de changer l'adresse MAC d'une interface réseau spé
     sudo python3 mac_changer.py -i wlan0
     ```
 
-## Mais comment trouver le nom de ton interface ?????????
+## Mais comment trouver le nom de ton interface ???
 
 Tu  peux lister tes interfaces réseau avec la commande :
 ```bash
@@ -36,7 +36,7 @@ ifconfig
 ```
 ![alt text](image.png)
 
-## (Si tu veux) Convertir en app. cliquable
+## (Si tu veux) Convertir le script en application cliquable
 
 Si tu veux lancer le script juste en cliquant sur son icône, voici comment (sous Linux) :
 
