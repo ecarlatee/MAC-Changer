@@ -24,7 +24,7 @@ Ce script en Python permet de changer l'adresse MAC d'une interface réseau spé
     sudo python3 mac_changer.py -i wlan0
     ```
 
-## Mais comment trouver le nom de ton interface ???
+## Mais comment trouver le nom de ton interface ?????????
 
 Tu  peux lister tes interfaces réseau avec la commande :
 ```bash
@@ -36,25 +36,17 @@ ifconfig
 ```
 ![alt text](image.png)
 
-## (Si tu veux) Convertir le script en application cliquable
+## (Optionnel) Convertir en application cliquable
 
-Si tu veux lancer le script juste en cliquant sur son icône, voici comment (sous Linux) :
+Pour créer facilement un raccourci sur ton Bureau :
 
-1.  Crée un fichier nommé `MacChanger.desktop` sur ton Bureau.
-2.  Ouvre-le avec un éditeur de texte et colle ça dedans (vérifie que le chemin est bien le bon) :
+1.  Lance  le script de configuration :
+    ```bash
+    python3 create_shortcut.py
+    ```
 
-```ini
-[Desktop Entry]
-Version=1.0
-Name=MAC Changer Ecarlate
-Comment=Change l'adresse MAC aléatoirement
-Exec=gnome-terminal -- bash -c "sudo python3 /home/ecarlate/Documents/Info/Websites-Projects/MACAddrChanger/mac_changer.py; echo; echo 'Appuie sur Entrée pour quitter...'; read line"
-Icon=utilities-terminal
-Terminal=false
-Type=Application
-Categories=Utility;Application;
-```
+2.  Un virus executable est maintenant sur ton bureau, tsais le mec
+3.  Fais un **Clic Droit** sur le fichier `MAC Changer Ecarlate` qui est apparu
+4.  Choisis **"Autoriser le lancement"** (ou "Allow Launching").
 
-3.  Ensuite fais un clic droit sur le fichier -> **Propriétés** -> **Permissions** -> Coche **"Autoriser l'exécution du fichier comme un programme"**.
-
-Maintenant, lorsque tu double-cliques dessus, un terminal s'ouvrira, te demandera ton MDP, changera l'adresse MAC, et tout est bien qui finit bien.
+Maintenant, lorsque tu double-cliques dessus, un terminal s'ouvrira et demandera ton mdp root, changera l'adresse MAC, et tout est bien qui finit bien !
