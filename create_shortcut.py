@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
 import os
 import stat
 import sys
 
 def create_shortcut():
-    # Chemin du script python actuel
+    # On crée le chemin du script
     current_dir = os.getcwd()
     script_path = os.path.join(current_dir, "mac_changer.py")
     
@@ -23,7 +22,7 @@ Type=Application
 Categories=Utility;Application;
 """
 
-    # Trouver le dossier Bureau
+    # One va trouver le dossier Bureau pour pouvoir y ajouter l'app.
     home = os.path.expanduser("~")
     desktop_dirs = [os.path.join(home, "Bureau"), os.path.join(home, "Desktop")]
     target_dir = None
@@ -38,7 +37,7 @@ Categories=Utility;Application;
             with open(file_path, "w") as f:
                 f.write(desktop_content)
             
-            # Rendre exécutable
+            # On le rend exécutable puis c'est bon
             st = os.stat(file_path)
             os.chmod(file_path, st.st_mode | stat.S_IEXEC)
             
